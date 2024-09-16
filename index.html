@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda JO</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/jpg" href="./img/favicon.png" />
+</head>
+
+<body>
+  <header>
+    <h1>Tiendita</h1>
+    <nav>
+      <ul>
+        <li><a href="#" id="vista-cliente">Tienda</a></li>
+        <!-- <li><a href="#" id="vista-admin">Vista Admin</a></li> -->
+        <li><a href="#" id="toggle-carrito">Ver Carrito (<span id="cantidad-carrito">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="contenedor-principal">
+    <aside class="menu-categorias">
+      <h2>Categorías</h2>
+      <ul id="lista-categorias">
+        <!-- Las categorías se cargarán aquí dinámicamente -->
+      </ul>
+    </aside>
+    <main>
+      <div class="buscador">
+        <input type="text" id="buscar-productos" placeholder="Buscar productos...">
+      </div>
+      <section id="productos" class="galeria-productos">
+        <!-- Los productos se cargarán aquí dinámicamente -->
+      </section>
+    </main>
+    <aside id="carrito" class="carrito">
+      <h2>Carrito de Compras</h2>
+      <div id="items-carrito"></div>
+      <p>Total: S/<span id="total-carrito">0.00</span></p>
+      <form id="formulario-cliente">
+        <h3>Datos del Cliente</h3>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="direccion">Dirección:</label>
+        <textarea id="direccion" name="direccion" required></textarea>
+
+        <fieldset>
+          <legend>Método de entrega:</legend>
+          <label>
+            <input type="radio" name="entrega" value="delivery" required> Delivery
+          </label>
+          <label>
+            <input type="radio" name="entrega" value="recojo" required> Recojo en tienda
+          </label>
+        </fieldset>
+
+        <button type="submit" id="realizar-pedido">Pedir por Whatsapp</button>
+      </form>
+    </aside>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
